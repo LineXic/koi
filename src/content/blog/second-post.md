@@ -1,16 +1,192 @@
 ---
-title: 'Second post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 02 2022'
-heroImage: '/blog-placeholder-4.jpg'
+title: "怎么搭建独立博客"
+description: "Lorem ipsum dolor sit amet"
+pubDate: "Jul 02 2022"
+heroImage: "/blog-placeholder-4.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+> 本博文使用 ChatGPT 生成，意在演示 Koi 主题的中文排版效果。
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+很多人问过我：「现在还有必要搭博客吗？」「Notion / Medium / 掘金不香吗？」
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+我一般不会正面回答这个问题。因为**搭不搭博客，取决于你把它当成什么**。
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+如果你想要曝光、流量、互动、涨粉，那独立博客大概率不是一个好选择；
+但如果你想要一个**长期存在、不被平台意志左右、结构可控的技术空间**，那它依然是一个非常合理的工程方案。
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+这篇文章不讨论「写什么」，只讨论一件事：
+**如何用一个工程师能接受的方式，搭建一个可维护、低心智负担的独立博客。**
+
+---
+
+## 一、先说结论：博客不是产品，是基础设施
+
+在动手之前，我想先明确一个设计前提：
+
+> **博客不是一个需要「运营」的产品，而是你的个人基础设施。**
+
+这意味着几件事：
+
+- 不追求日活 / PV
+- 不需要复杂交互
+- 不依赖任何单一平台
+- 允许长期低频维护
+- 即使你半年不更新，它也应该正常存在
+
+所以技术选型的核心目标不是「炫」，而是：
+
+- **稳定**
+- **可迁移**
+- **可长期维护**
+- **认知成本低**
+
+---
+
+## 二、域名：这是唯一必须花钱的部分
+
+如果你只愿意为博客花一笔钱，那应该是 **域名**。
+
+### 为什么一定要有独立域名？
+
+- 它是你在互联网上唯一真正属于你的东西
+- 平台会倒闭，域名不会（只要你续费）
+- 你可以随时更换技术栈，而不影响外部链接
+
+### 怎么选？
+
+工程角度的建议：
+
+- `.com` / `.net` / `.dev` / `.run` 都可以
+- 尽量 **短、可读、可长期使用**
+- 不要绑定某个具体技术（比如 `xxx-react-blog.com`）
+
+域名是**十年尺度**的决策，不要为了酷炫牺牲可持续性。
+
+---
+
+## 三、架构选择：静态优先，一切从简
+
+> **99% 的个人博客，不需要后端。**
+
+### 推荐的基本架构
+
+```
+Markdown → 静态生成 → CDN 托管
+```
+
+常见组合包括：
+
+- Markdown / MDX
+- 静态站点生成器（SSG）
+- 对象存储或静态托管平台
+- CDN
+
+你可以把它理解为：
+**把博客当成一个只读的前端项目。**
+
+### 为什么不一开始就上全栈？
+
+- 登录、评论、数据库、鉴权都是长期负担
+- 你写博客的时间，会被维护系统吞掉
+- 大多数功能，后期都可以外挂
+
+工程上，这叫 **推迟不可逆复杂度**。
+
+---
+
+## 四、静态站点生成器怎么选？
+
+我不想列「排行榜」，只说一个判断标准：
+
+> **选你 3 年后还能看懂的。**
+
+常见选择：
+
+- Hexo / Hugo（成熟、简单）
+- Astro / Next.js（前端友好、可扩展）
+- 自己写（如果你清楚自己在干什么）
+
+### 我个人偏向的特性
+
+- 内容与代码分离清晰
+- 构建过程可控
+- 不强依赖第三方 SaaS
+- 支持纯 Markdown（不是强 CMS）
+
+如果你已经是前端工程师，用一个你熟悉的工具链是完全合理的。
+
+---
+
+## 五、部署：让「发布」这件事不值得一提
+
+一个好的博客系统，发布应该像：
+
+> 写完 → git push → 完事
+
+### 推荐思路
+
+- GitHub / GitLab 托管源码
+- CI 自动构建
+- 输出静态文件
+- CDN 托管
+
+无论你用的是：
+
+- GitHub Pages
+- Cloudflare Pages
+- Vercel
+- 自建对象存储 + CDN
+
+核心目标只有一个：
+
+> **不要让「发博客」成为一件需要心理准备的事。**
+
+如果每次发布都要你 SSH 上服务器、改配置、排错，那这个博客迟早会被你放弃。
+
+---
+
+## 六、样式与设计：越克制，越耐用
+
+这是很多技术博客最容易走偏的地方。
+
+### 我的设计原则很简单：
+
+- 白底 or 深色底
+- 单栏为主
+- 字体清晰
+- 尽量少动画
+- 不追热点 UI 风格
+
+你不是在做 Landing Page，也不是在做作品集首页。
+
+> **博客的 UI 是为了让你十年后还能忍受它。**
+
+---
+
+## 七、评论、统计、搜索：全部是可选项
+
+工程上，这些都是 **外挂能力**：
+
+- 评论：Giscus / 自建 / 直接不要
+- 统计：Plausible / Umami / 不统计
+- 搜索：本地索引 / Algolia / Ctrl+F
+
+如果你发现自己在博客还没写几篇时，就在纠结评论系统，那大概率是顺序反了。
+
+---
+
+## 八、最后：博客是一个「低回报、高复利」的系统
+
+搭建独立博客这件事，本质上很像：
+
+- 配置一套开发环境
+- 写一个内部工具
+- 搭一个不会被 KPI 追着跑的系统
+
+它的回报不会立刻出现，但它有几个很重要的特性：
+
+- 你随时可以回头看
+- 别人可以准确理解你在想什么
+- 你的技术轨迹是连续的，而不是碎片化的
+
+**它不保证你被看见，但它保证你没有消失。**
